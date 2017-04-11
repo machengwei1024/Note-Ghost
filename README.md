@@ -1,0 +1,2 @@
+# Note-Ghost
+Ghost Theme
