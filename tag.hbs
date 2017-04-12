@@ -1,0 +1,60 @@
+{{!< default}}
+<div class="body-layout">
+    {{#if tag.image}}
+    <style media="screen">
+        .index-header{
+            background:url({{tag.image}});
+            background-repeat:no-repeat;
+            background-size: 100% 100%;
+            background-position:center;
+        }
+        @media screen and (max-width:390px){
+            .index-header{
+                background: url(assets/images/index-header-bg-390.jpg);
+                background-repeat:no-repeat;
+                background-size: 100% 100%;
+            }
+        }
+    </style>
+    <div class="index-header">
+       <div class="index-header-wave"></div>
+    </div>
+    {{else}}
+    <style media="screen">
+        .index-header{
+            background:url({{@blog.cover}});
+            background-repeat:no-repeat;
+            background-size: 100% 100%;
+            background-position:center;
+        }
+        @media screen and (max-width:390px){
+            .index-header{
+                background: url(assets/images/index-header-bg-390.jpg);
+                background-repeat:no-repeat;
+                background-size: 100% 100%;
+            }
+        }
+    </style>
+    <div class="index-header">
+       <div class="index-header-wave"></div>
+    </div>
+    {{/if}}
+    <div class="index-container">
+    {{#foreach posts}}
+        <div class="index-post-layout">
+            <article class="index-post-abstract">
+                <header>
+                    <h2><a href="{{url}}">{{title}}</a></h2>
+                    <time datetime="{{date format="DD MMMM YYYY"}}">{{date format="DD MMMM YYYY"}}</time>
+                </header>
+                <section>
+                    {{content characters="130"}}
+                </section>
+            </article>
+        </div>
+        {{/foreach}}
+        {{pagination}}
+    </div>
+    {{> "footer"}}
+</div>
+

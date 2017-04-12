@@ -1,0 +1,45 @@
+{{!< default}}
+
+<div class="body-layout">
+    {{#if @blog.cover}}
+    <style media="screen">
+        .index-header{
+            background:url({{@blog.cover}});
+            background-repeat:no-repeat;
+            background-size: 100% 100%;
+        }
+        @media screen and (max-width:390px){
+            .index-header{
+                background: url({{@blog.cover}});
+                background-repeat:no-repeat;
+                background-position:center;
+            }
+        }
+    </style>
+    <div class="index-header">
+       <div class="index-header-wave"></div>
+    </div>
+    {{else}}
+    <div class="index-header" style="background:url(assets/images/index-header-default-bg.jpg);background-size:100% 100%;background-repeat:no-repeat;">
+       <div class="index-header-wave"></div>
+    </div>
+    {{/if}}
+    <div class="index-container">
+    {{#foreach posts}}
+        <div class="index-post-layout">
+            <article class="index-post-abstract">
+                <header>
+                    <h2><a href="{{url}}">{{title}}</a></h2>
+                    <time datetime="{{date format="DD MMMM YYYY"}}">{{date format="DD MMMM YYYY"}}</time>
+                </header>
+                <section>
+                    {{content characters="150"}}
+                </section>
+            </article>
+        </div>
+        {{/foreach}}
+        {{pagination}}
+    </div>
+    {{> "footer"}}
+</div>
+

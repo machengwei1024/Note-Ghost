@@ -1,0 +1,14 @@
+{{!-- Previous/next page links - displayed on every page --}}
+{{!-- pagination --}}
+
+<nav class="pagination">
+{{#if prev}}
+    <a href="{{page_url prev}}" class="pagination-up pagination-text fa fa-angle-double-left"></a>
+{{/if}}
+    <span class="pagination-number">
+    	第 {{page}} 页 / 共 {{pages}} 页
+    </span>
+{{#if next}}
+    <a href="{{page_url next}}" class="pagination-down pagination-text fa fa-angle-double-right"></a>
+{{/if}}
+</nav>

@@ -1,0 +1,74 @@
+{{!< default}}
+{{#post}}
+
+
+<div class="body-layout">
+<div class="post-body-layout">
+{{#if image}}
+<style media="screen">
+    .post-header{
+        width: 100%;
+        height: 280px;
+        background: url({{image}});
+        background-repeat:no-repeat;
+        background-size: 100% 100%;
+        background-position:center;
+        padding: 50px 0;
+        text-align: center;
+        margin-bottom: 100px;
+        position: relative;
+    }
+    .post-header-wave{
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 56px;
+        background: url({{@blog.url}}/assets/images/index-header-wave.png);
+        background-size: 100% 100%;
+    }
+    .post-header-info{
+        text-align: center;
+        margin-top: 70px;
+        width: 100%;
+    }
+    .post-header-info>h2{
+        font-size: 35px;
+        color: #fff;
+        font-weight: bold;
+        margin-bottom: 15px;
+    }
+    .post-header-info>time{
+        font-size: 9pt;
+        color: #fff;
+        font-weight: 400;
+    }
+    .post-body-layout{
+        background: none;
+    }
+</style>
+    <div class="post-header">
+        <div class="post-header-info">
+            <h2>{{title}}</h2>
+        </div>
+        <div class="post-header-wave"></div>
+    </div>
+{{else}}
+    <div class="post-header">
+        <h2>{{title}}</h2>
+    </div>
+{{/if}}
+    <div class="index-container">
+        <div class="post-layout">
+            <article class="post-main">
+                <section class="post-main-section">
+                    {{content}}
+                </section>
+            </article>
+        </div>
+    </div>
+</div>
+
+{{> "footer"}}
+
+</div>
+{{/post}}

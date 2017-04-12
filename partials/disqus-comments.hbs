@@ -1,0 +1,33 @@
+<div class="post-comments">
+	<span class="post-comments-btn">评论</span>
+	<div class="post-comments-script">
+{{!-- 下面是评论代码 --}}
+		<div id="disqus_thread"></div>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$('.post-comments-btn').on('click', function(){
+			var disqus_shortname = 'weic-demo';	// 修改值为你的网站名;
+			$.ajax({
+				type: "GET",
+				url: "http://" + disqus_shortname + ".disqus.com/embed.js",
+				dataType: "script",
+				cache: true
+			});
+			//$(this).fadeOut();
+		});
+	});
+	var reset = function (newIdentifier, newUrl, newTitle, newLanguage) {
+	    DISQUS.reset({
+	        reload: true,
+	        config: function () {
+	            this.page.identifier = newIdentifier;
+	            this.page.url = newUrl;
+	            this.page.title = newTitle;
+	            this.language = newLanguage;
+	        }
+	    });
+	};
+</script>		
+{{!-- 上面是评论代码 --}}
+	</div>
+</div>

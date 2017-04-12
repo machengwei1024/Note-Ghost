@@ -1,0 +1,33 @@
+<div class="navbar-layout">
+    <div class="navbar-header">
+        <img src="{{@blog.logo}}" alt="">
+    </div>
+    <div class="navbar-date">
+        <div class="navbar-date-post">
+            <h2>文章</h2>
+            {{#get "posts" as |posts postsObj|}}
+            <p>{{postsObj.total}}</p>
+            {{/get}}
+        </div>
+        <div class="navbar-date-tags">
+            <h2>标签</h2>
+            {{#get "tags" as |tags tagsObj|}}
+                <p>{{tagsObj.total}}</p>
+            {{/get}}
+        </div>
+        <div class="clear-float"></div>
+    </div>
+    <div class="navbar-links">
+        <ul>
+        {{#foreach navigation}}
+        <li><a href="{{url absolute="true"}}">{{label}}</a></li>
+        {{/foreach}}
+        </ul>
+    </div>
+    <div class="navbar-icon">
+        <a href="" class="fa fa-github navbar-github"></a>
+        <a href="" class="fa fa-weibo navbar-weibo"></a>
+        <a href="" class="fa fa-envelope navbar-mail"></a>
+        <a href="" class="fa fa-rss navbar-rss"></a>
+    </div>
+</div>

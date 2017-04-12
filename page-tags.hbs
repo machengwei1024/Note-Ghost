@@ -1,0 +1,27 @@
+{{!< default}}
+{{#post}}
+<div class="body-layout">
+<div class="post-body-layout">
+    <div class="post-header">
+        <h2>{{title}}</h2>
+    </div>
+    <div class="index-container">
+        <div class="post-layout">
+            <article class="post-main">
+                <section class="tags-page-section">
+                    {{! Tag Cloud }}
+                    {{#get "tags" limit="all" include="count.posts" order="count.posts desc" }}
+                        {{#foreach tags}}
+                            <a href="/tag/{{slug}}">{{name}}</a>
+                        {{/foreach}}
+                    {{/get}}
+                </section>
+            </article>
+        </div>
+    </div>
+</div>
+
+{{> "footer"}}
+
+</div>
+{{/post}}
