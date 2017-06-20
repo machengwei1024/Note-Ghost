@@ -12,7 +12,7 @@
                     {{! Tag Cloud }}
                     {{#get "tags" limit="all" include="count.posts" order="count.posts desc" }}
                         {{#foreach tags}}
-                            <a href="/tag/{{slug}}">{{name}}</a>
+                            <a href="/tag/{{slug}}" class="tag-could">{{name}}</a>
                         {{/foreach}}
                     {{/get}}
                 </section>
@@ -24,4 +24,13 @@
 {{> "footer"}}
 
 </div>
+<script>
+  // 博客侧栏标签云随机色
+  var tag_cloud = $('.tag-could');
+  tag_cloud.each(function () {
+      var Cnum = 9;
+      var Crand = parseInt(Math.random() * Cnum);
+      $(this).addClass("tag-could" + Crand);
+  })
+</script>
 {{/post}}

@@ -17,7 +17,7 @@
 	<link rel="stylesheet" href="{{asset "css/font-awesome.min.css"}}">
     <link rel="stylesheet" href="{{asset "css/atom-one-light.css"}}">
 	<link rel="stylesheet" href="{{asset "css/waves.min.css"}}">
-    <link rel="stylesheet" href="{{asset "css/zoom.css"}}">
+    <link rel="stylesheet" href="{{asset "css/jquery.fancybox.css"}}">
     <link rel="stylesheet" href="{{asset "css/layout.css"}}">
 	<link rel="stylesheet" href="{{asset "css/adapt.css"}}">
     <script src="{{asset "js/jquery-2.2.4.min.js"}}"></script>  
@@ -45,7 +45,7 @@
     <script src="{{asset "js/highlight.pack.js"}}"></script>
     <script src="{{asset "js/highlightjs-line-numbers.js"}}"></script>
     <script src="{{asset "js/waves.min.js"}}"></script>
-    <script src="{{asset "js/zoom.js"}}"></script>
+    <script src="{{asset "js/jquery.fancybox.js"}}"></script>
     <script src="{{asset "js/transition.js"}}"></script>
     <script src="{{asset "js/main.js"}}"></script>
     <script type="text/javascript">
@@ -70,20 +70,18 @@
         hljs.initLineNumbersOnLoad();
         Waves.displayEffect();
         otherFunction();
-        $(document).pjax('a', '#pjax-container', {fragment:'#pjax-container', timeout:8000});
-        $(document).on('pjax:send', function() {
-            $('.page-loading').fadeIn()
-        });
-        $(document).on('pjax:complete', function() {
-            $('.page-loading').fadeOut();
-            Waves.displayEffect();
+        $(document).pjax('a', '#pjax-container', {fragment:'#pjax-container', timeout:8000}).on('pjax:send', function() {
+            $('.page-loading').fadeIn();
+        }).on('pjax:complete', function() {
             $('pre code').each(function(i, block){
                 hljs.highlightBlock(block);
             });
-            otherFunction();
             $('code.hljs').each(function(i, block){
                 hljs.lineNumbersBlock(block);
             });
+        }).on('pjax:end', function() {
+            $('.page-loading').fadeOut();
+            otherFunction();
         });
     </script>
 </body>
