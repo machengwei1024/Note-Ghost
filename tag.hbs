@@ -1,9 +1,9 @@
 {{!< default}}
 <div class="body-layout">
-    {{#if tag.feature_image}}
+    {{#if tag.image}}
     <style media="screen">
         .index-header{
-            background:url({{tag.feature_image}});
+            background:url({{tag.image}});
             background-repeat:no-repeat;
             background-size: 100% 100%;
             background-position:center;
@@ -22,7 +22,7 @@
     {{else}}
     <style media="screen">
         .index-header{
-            background:url({{@blog.cover_image}});
+            background:url({{@blog.cover}});
             background-repeat:no-repeat;
             background-size: 100% 100%;
             background-position:center;
@@ -57,3 +57,4 @@
     </div>
     {{> "footer"}}
 </div>
+

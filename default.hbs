@@ -5,21 +5,22 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
 	<meta name="renderer" content="webkit">
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 {{!-- Page Meta --}}
-	<title>{{meta_title}}</title>
+    <title>{{meta_title}}</title>
+    <meta name="description" content="{{meta_description}}" />
 {{!-- Mobile Meta --}}
-	<meta name="HandheldFriendly" content="True" />
+    <meta name="HandheldFriendly" content="True" />
 {{!-- Brand icon --}}
-	<link rel="shortcut icon" href="{{asset "images/favicon.ico"}}">
+    <link rel="shortcut icon" href="{{asset "images/favicon.ico"}}">
 {{!-- Styles'n'Scripts --}}
 	<link rel="stylesheet" href="{{asset "css/font-awesome.min.css"}}">
-	<link rel="stylesheet" href="{{asset "css/atom-one-light.css"}}">
+    <link rel="stylesheet" href="{{asset "css/atom-one-light.css"}}">
 	<link rel="stylesheet" href="{{asset "css/waves.min.css"}}">
-	<link rel="stylesheet" href="{{asset "css/jquery.fancybox.css"}}">
-	<link rel="stylesheet" href="{{asset "css/layout.css"}}">
+    <link rel="stylesheet" href="{{asset "css/jquery.fancybox.css"}}">
+    <link rel="stylesheet" href="{{asset "css/layout.css"}}">
 	<link rel="stylesheet" href="{{asset "css/adapt.css"}}">
-	<script src="{{asset "js/jquery-2.2.4.min.js"}}"></script>
+    <script src="{{asset "js/jquery-2.2.4.min.js"}}"></script>  
 </head>
 <body>
 <div class="page-loading">
@@ -45,6 +46,7 @@
     <script src="{{asset "js/highlightjs-line-numbers.js"}}"></script>
     <script src="{{asset "js/waves.min.js"}}"></script>
     <script src="{{asset "js/jquery.fancybox.js"}}"></script>
+    <script src="{{asset "js/transition.js"}}"></script>
     <script src="{{asset "js/main.js"}}"></script>
     <script type="text/javascript">
         var windowW = ($(window).width());

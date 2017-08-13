@@ -1,42 +1,9 @@
 {
-    "name": "note",
-    "description": "大气时尚，适合写作的博客主题.",
-    "demo": "https://weic96.cn",
-    "version": "1.0",
-    "engines": {
-        "ghost": ">=1.0"
-    },
-    "license": "No",
-    "screenshots": {
-        "desktop": "assets/screenshot-desktop.jpg",
-        "mobile": "assets/screenshot-mobile.jpg"
-    },
-    "author": {
-        "name": "Weic",
-        "email": "i@weic96.cn",
-        "url": "https://weic.me"
-    },
-    "gpm": {
-        "type": "theme",
-        "categories": [
-            "Minimal",
-            "Magazine"
-        ]
-    },
-    "keywords": [
-        "ghost",
-        "theme"
-    ],
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/Weic96/Note-Ghost.git"
-    },
-    "bugs": "https://weic.me/themes-note/",
-    "contributors": "https://github.com/Weic96/Note-Ghost/graphs/contributors",
-    "devDependencies": {
-
-    },
-    "config": {
-        "posts_per_page": 5
-    }
+  "name": "Note",
+  "version": "0.3",
+  "Github":"https://github.com/Weic96/Note-Ghost",
+  "Url":"https://weic.me/themes-note",
+  "author": "Weic Ma",
+  "E-mail":"i@weic96.cn",
+  "website": "https://weic.me"
 }
