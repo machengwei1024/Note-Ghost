@@ -74,7 +74,7 @@ ul,ol {
 	margin: 0
 }
 a,
-a:focus, 
+a:focus,
 a:hover
 input,
 input:focus,
@@ -152,7 +152,8 @@ button:focus{
 	left: 30px;
 	padding: 18px 28px;
 	border-radius: 180px;
-	/*background-color: #fff;*/
+	background-color: #fff;
+	border: 1px solid #eee;
 	z-index: 99;
 	-webkit-transition: -webkit-transform .4s ease;
 	transition: transform .4s ease;
@@ -405,14 +406,14 @@ button:focus{
 	background: #fafafa;
 	position: relative;
 }
-.index-header-wave{
+/*.index-header-wave{
 	position: absolute;
 	bottom: 0;
 	height: 56px;
 	width: 100%;
 	background: url(../images/index-header-wave.png);
 	background-size: 100% 100%;
-}
+}*/
 /*首页头部结束*/
 /*页面布局开始*/
 .index-container{
@@ -564,43 +565,43 @@ button:focus{
 }
 .index-post-abstract>section h1{
 	font-size: 25pt;
-	font-weight: normal;
-	color: #999;
+	font-weight: 200;
+	color: #44aadc;
 	margin-top: 26px;
 	margin-bottom: 22px;
 }
 .index-post-abstract>section h2{
 	font-size: 22pt;
-	font-weight: normal;
-	color: #999;
+	font-weight: 200;
+	color: #44aadc;
 	margin-top: 22px;
 	margin-bottom: 22px;
 }
 .index-post-abstract>section h3{
 	font-size: 19pt;
-	font-weight: normal;
-	color: #999;
+	font-weight: 200;
+	color: #44aadc;
 	margin-top: 20px;
 	margin-bottom: 22px;
 }
 .index-post-abstract>section h4{
 	font-size: 17pt;
-	font-weight: normal;
-	color: #999;
+	font-weight: 200;
+	color: #44aadc;
 	margin-top: 14px;
 	margin-bottom: 20px;
 }
 .index-post-abstract>section h5{
 	font-size: 15pt;
-	font-weight: normal;
-	color: #999;
+	font-weight: 200;
+	color: #44aadc;
 	margin-top: 14px;
 	margin-bottom: 20px;
 }
 .index-post-abstract>section h6{
 	font-size: 13pt;
-	font-weight: normal;
-	color: #999;
+	font-weight: 200;
+	color: #44aadc;
 	margin-top: 14px;
 	margin-bottom: 20px;
 }
@@ -805,43 +806,43 @@ button:focus{
 }
 .post-main-section h1{
 	font-size: 25pt;
-	font-weight: normal;
-	color: #999;
+	font-weight: 200;
+	color: #44aadc;
 	margin-top: 26px;
 	margin-bottom: 30px;
 }
 .post-main-section h2{
 	font-size: 22pt;
-	font-weight: normal;
-	color: #999;
+	font-weight: 200;
+	color: #44aadc;
 	margin-top: 22px;
 	margin-bottom: 30px;
 }
 .post-main-section h3{
 	font-size: 19pt;
-	font-weight: normal;
-	color: #999;
+	font-weight: 200;
+	color: #44aadc;
 	margin-top: 20px;
 	margin-bottom: 30px;
 }
 .post-main-section h4{
 	font-size: 17pt;
-	font-weight: normal;
-	color: #999;
+	font-weight: 200;
+	color: #44aadc;
 	margin-top: 14px;
 	margin-bottom: 28px;
 }
 .post-main-section h5{
 	font-size: 15pt;
-	font-weight: normal;
-	color: #999;
+	font-weight: 200;
+	color: #44aadc;
 	margin-top: 14px;
 	margin-bottom: 26px;
 }
 .post-main-section h6{
 	font-size: 13pt;
-	font-weight: normal;
-	color: #999;
+	font-weight: 200;
+	color: #44aadc;
 	margin-top: 14px;
 	margin-bottom: 24px;
 }
@@ -1302,10 +1303,10 @@ button:focus{
   50% { -webkit-transform: scale(1.0) }
 }
 @keyframes bounce{
-  0%, 100% { 
+  0%, 100% {
     transform: scale(0.0);
     -webkit-transform: scale(0.0);
-  } 50%{ 
+  } 50%{
     transform: scale(1.0);
     -webkit-transform: scale(1.0);
   }

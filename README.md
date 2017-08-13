@@ -1,5 +1,8 @@
 [English](https://github.com/Weic96/Note-Ghost/blob/master/README-EN)
 
+### For Ghost V0.x
+
+
 Note正如其名字一样，是一款适合写作、做笔记的博客主题，设计风格来自我的上一款主题 [《Jian》](https://weic96.cn/themes-jian) ，也可以理解为《Jian》的升级版、整容版；
 
 > 注意：此款主题目前仍然处于完善阶段，所以会不断地增加新功能和优化，如果你在使用此款主题请密切关注此篇文章或Github
