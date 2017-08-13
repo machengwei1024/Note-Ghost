@@ -1,29 +1,24 @@
 {{!< default}}
 
 <div class="body-layout">
-    {{#if @blog.cover}}
-    <style media="screen">
-        .index-header{
-            background:url({{@blog.cover}});
-            background-repeat:no-repeat;
-            background-size: 100% 100%;
-        }
-        @media screen and (max-width:390px){
-            .index-header{
-                background: url({{@blog.cover}});
-                background-repeat:no-repeat;
-                background-position:center;
-            }
-        }
-    </style>
+<style media="screen">
+ .index-header{
+      background:url({{@blog.cover_image}});
+      background-repeat:no-repeat;
+      background-size: 100% 100%;
+ }
+ @media screen and (max-width:390px){
+      .index-header{
+          background: url({{@blog.cover_image}});
+          background-repeat:no-repeat;
+          background-position:center;
+      }
+ }
+</style>
     <div class="index-header">
        <div class="index-header-wave"></div>
     </div>
-    {{else}}
-    <div class="index-header" style="background:url(assets/images/index-header-default-bg.jpg);background-size:100% 100%;background-repeat:no-repeat;">
-       <div class="index-header-wave"></div>
-    </div>
-    {{/if}}
+
     <div class="index-container">
     {{#foreach posts}}
         <div class="index-post-layout">
@@ -42,4 +37,3 @@
     </div>
     {{> "footer"}}
 </div>
-
